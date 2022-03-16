@@ -22,7 +22,7 @@ const Navbartop=()=>{
       <Nav.Link href="#deets">github</Nav.Link>
       
       <Nav.Link eventKey={2} as={Link} to='/register'>
-        morestuff
+        Register
       </Nav.Link>
     </Nav>
   </Navbar.Collapse>
