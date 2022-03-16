@@ -12,9 +12,9 @@ export const fetchTete = ()=>(dispatch)=>{
     axios
     .get('https://tete-a-tete-backend.herokuapp.com/tete/')
     .then(data=>{
-        console.log(data.data)
+        console.log(data.data.data)
 
-        dispatch({type: FETCH_TETE_SUCESS, payload: data.data})
+        dispatch({type: FETCH_TETE_SUCESS, payload: data.data.data})
     })
     .catch(err=>{
         console.log(err.message)
