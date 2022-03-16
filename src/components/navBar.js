@@ -19,7 +19,7 @@ const Navbartop=()=>{
       </NavDropdown>
     </Nav>
     <Nav>
-      <Nav.Link href="#deets">github</Nav.Link>
+      <Nav.Link as={Link} to="/login">Login</Nav.Link>
       
       <Nav.Link eventKey={2} as={Link} to='/register'>
         Register

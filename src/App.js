@@ -11,6 +11,7 @@ import { connect } from 'react-redux';
 
 import Navbartop from './components/navBar';
 import NavBottom from './components/navbotttom';
+import Login from './pages/login';
 
 const mapToStateToProps=(state)=>({
   tetedata: state.tetedata,
@@ -34,7 +35,7 @@ console.log(props.tetedata)
    <Switch>
    <Route path='/username/:username' component={UserDetail}/>
    <Route path='/register' component={Register}/>
-     
+    <Route path='/login' component={Login}/>
     { <Route path='/' component={Home}/>}
 
    </Switch>
