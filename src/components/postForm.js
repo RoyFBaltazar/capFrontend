@@ -51,7 +51,7 @@ const [intialForm] = useState({
       </Form.Label>
       <InputGroup className="mb-2">
         <InputGroup.Text>#</InputGroup.Text>
-        <FormControl id="inlineFormInputGroup" name="nickname" placeholder="nickname" onChange={handleChange} />
+        <FormControl id="inlineFormInputGroup" minLength="1" name="nickname" placeholder="nickname" onChange={handleChange} />
       </InputGroup>
     </Col>
     <Col xs="auto">

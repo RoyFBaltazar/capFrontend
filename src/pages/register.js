@@ -27,14 +27,14 @@ history.push('/home')
     return(  <Form onSubmit={handleSubmit}>
       <Form.Group className="mb-3" controlId="formBasicUsername">
           <Form.Label>Username</Form.Label>
-          <Form.Control type="text" name="username" placeholder="Enter username" onChange={handleChange}/>
+          <Form.Control type="text" name="username" minLength="1" placeholder="Enter username" onChange={handleChange}/>
           <Form.Text className="text-muted">
             
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
-          <Form.Control type="text" name="email" placeholder="Enter email" onChange={handleChange}/>
+          <Form.Control type="text" name="email" minLength="1" placeholder="Enter email" onChange={handleChange}/>
           <Form.Text className="text-muted">
             We'll never share your email with anyone else.
           </Form.Text>
