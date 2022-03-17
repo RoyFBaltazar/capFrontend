@@ -59,12 +59,12 @@ export const newPost = (headers, newpost)=>(dispatch)=>{
     const username = localStorage.getItem('username')
     console.log(token)
     axios
-    .post(`https://tete-a-tete-backend.herokuapp.com/tete/username/${username}`, {Header: headers}, newpost)
+    .post(`https://tete-a-tete-backend.herokuapp.com/tete/username/${username}`, newpost, {headers: headers})
     .then(data=>{
         console.log(data)
     })
-    .catch(err=> dispatch(console.log(newpost), {type: FETCH_TETE_FAIL, payload: err.message}))
-    //  dispatch({type:Post_TETE, payload: newpost})
+    .catch(err=> dispatch( {type: FETCH_TETE_FAIL, payload: err.message}))
+     dispatch({type:Post_TETE, payload: newpost})
 }
 
 export const logoutUser =(logout)=>(dispatch)=>{

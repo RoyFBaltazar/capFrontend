@@ -16,9 +16,9 @@ const Navbartop=(props)=>{
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
-      <Nav.Link href="#features">Features</Nav.Link>
+      
       <Nav.Link as={Link} to="/username/:username" >My Post</Nav.Link>
-      <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+      <NavDropdown title="More" id="collasible-nav-dropdown">
         <NavDropdown.Item href="https://github.com/RoyFBaltazar/capFrontend">Github</NavDropdown.Item>
         <NavDropdown.Item href="https://www.linkedin.com/in/roy-baltazar-9b42a5228/">LinkedIn</NavDropdown.Item>
         <NavDropdown.Divider />
@@ -28,9 +28,9 @@ const Navbartop=(props)=>{
     <Nav>
       <Nav.Link as={Link} to="/login">Login</Nav.Link> 
       
-      {localUsename = '' ? '': <Nav.Link eventKey={2} as={Link} to='/register'>
+       <Nav.Link eventKey={2} as={Link} to='/register'>
         Register
-      </Nav.Link>}
+      </Nav.Link>
     </Nav>
   </Navbar.Collapse>
   </Container>
