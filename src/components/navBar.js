@@ -22,7 +22,7 @@ const Navbartop=(props)=>{
         <NavDropdown.Item href="https://github.com/RoyFBaltazar/capFrontend">Github</NavDropdown.Item>
         <NavDropdown.Item href="https://www.linkedin.com/in/roy-baltazar-9b42a5228/">LinkedIn</NavDropdown.Item>
         <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+        {/* <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item> */}
       </NavDropdown>
     </Nav>
     <Nav>
