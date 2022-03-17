@@ -28,7 +28,7 @@ const Login =(props)=>{
           <Form.Label>username</Form.Label>
           <Form.Control type="text" name="username" placeholder="Enter username" onChange={handleChange} />
           <Form.Text className="text-muted">
-            
+            check username
           </Form.Text>
         </Form.Group>
       
