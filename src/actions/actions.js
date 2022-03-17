@@ -52,7 +52,7 @@ export const loginUser = (newLogin)=>(dispatch)=>{
     .catch(err=> dispatch({type: FETCH_TETE_FAIL, payload: err.message}))
     dispatch({type: LOGIN_USER, payload: newLogin})
 }
-export const newPost = (headers, newpost)=>(dispatch)=>{
+export const newPost = (newpost)=>(dispatch)=>{
     dispatch({type: FETCH_TETE_START})
     let token = localStorage.getItem('token')
     const headers = {'Authorization': token}
