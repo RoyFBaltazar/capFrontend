@@ -1,6 +1,14 @@
 import { Navbar, Nav, Container,NavDropdown } from "react-bootstrap"
+import { connect } from "react-redux"
 import { Link } from "react-router-dom"
-const Navbartop=()=>{
+const mapToStateToProps=(state)=>({
+ loggedIn: state.loggedIn,
+  isLoading: state.isLoading,
+  error: state.error
+})
+const Navbartop=(props)=>{
+  let localUsename = localStorage.getItem('username')
+ 
     return(
 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
   <Container>
@@ -9,7 +17,7 @@ const Navbartop=()=>{
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
       <Nav.Link href="#features">Features</Nav.Link>
-      <Nav.Link href="#pricing">My Post</Nav.Link>
+      <Nav.Link as={Link} to="/username/:username" >My Post</Nav.Link>
       <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
         <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
@@ -19,15 +27,15 @@ const Navbartop=()=>{
       </NavDropdown>
     </Nav>
     <Nav>
-      <Nav.Link as={Link} to="/login">Login</Nav.Link>
+      <Nav.Link as={Link} to="/login">Login</Nav.Link> 
       
-      <Nav.Link eventKey={2} as={Link} to='/register'>
+      {localUsename = '' ? '': <Nav.Link eventKey={2} as={Link} to='/register'>
         Register
-      </Nav.Link>
+      </Nav.Link>}
     </Nav>
   </Navbar.Collapse>
   </Container>
 </Navbar>
     )
 }
- export default Navbartop
+ export default connect(mapToStateToProps,{})(Navbartop)

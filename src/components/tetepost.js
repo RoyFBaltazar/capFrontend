@@ -9,10 +9,10 @@ const mapToStateToProps=(state)=>({
   
   
 const Tetepost = (props)=>{
-    console.log(props.tetedata.data)
    
+   console.log(props.tetedata)
     return(<div>
-{props.tetedata.map(post=>{return(<Container fluid  style={{
+{props.tetedata.map(post=>{return(<Container key={post._id} fluid  style={{
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',

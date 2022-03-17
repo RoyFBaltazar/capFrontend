@@ -2,20 +2,36 @@ import Form from 'react-bootstrap/Form'
 import { Row, Col, InputGroup, FormControl, Button } from 'react-bootstrap';
 import { newPost } from '../actions/actions';
 import { useState } from 'react';
+import { connect } from 'react-redux';
 
 const Post=(props)=>{
+
 const [intialForm] = useState({
-  
+  username: localStorage.getItem('username'),
   nickname: '',
   teteatete: '',
-  private: false
+  // private: false
 
 
 })
-  const username = localStorage.getItem('username')
+  // const username = localStorage.getItem('username')
+  const [form, setForm] = useState(intialForm)
+
+  const handleChange=(e)=>{
+    console.log(e.target.value)
+    setForm({...form, [e.target.name]: e.target.value})
   
+  }
+  
+  const handleSubmit=(e)=>{
+    e.preventDefault()
+    console.log(form)
+    props.newPost(form)
+    setForm(intialForm)
+  }
+
     return(<div>
-   <Form>
+   <Form onSubmit={handleSubmit}>
   <Row className="align-items-center">
     <Col xs={8}>
       <Form.Label htmlFor="inlineFormInput" visuallyHidden>
@@ -26,6 +42,7 @@ const [intialForm] = useState({
         id="inlineFormInput"
         placeholder="Let's Talk"
         name="teteatete"
+        onChange={handleChange}
       />
     </Col>
     <Col xs="auto">
@@ -34,7 +51,7 @@ const [intialForm] = useState({
       </Form.Label>
       <InputGroup className="mb-2">
         <InputGroup.Text>#</InputGroup.Text>
-        <FormControl id="inlineFormInputGroup" name="nickname" placeholder="nickname" />
+        <FormControl id="inlineFormInputGroup" name="nickname" placeholder="nickname" onChange={handleChange} />
       </InputGroup>
     </Col>
     <Col xs="auto">
@@ -55,4 +72,4 @@ const [intialForm] = useState({
 </Form>
     </div>)
 }
-export default Post;
+export default connect(null, {newPost}) (Post);

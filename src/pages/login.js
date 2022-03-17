@@ -11,7 +11,7 @@ const Login =(props)=>{
   let history = useHistory()
   const [form, setForm] = useState(intialForm)
   const handleChange=(e)=>{
-    console.log(e.target.value)
+    
     setForm({...form, [e.target.name]: e.target.value})
   
   }

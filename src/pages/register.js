@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Form, Button} from "react-bootstrap"
 import { connect } from "react-redux";
+import { useHistory } from "react-router-dom";
 import { addNewUser } from "../actions/actions";
 const Register =(props)=>{
   const [intialForm] = useState({
@@ -11,7 +12,7 @@ const Register =(props)=>{
 
   })
   const [form, setForm] = useState(intialForm)
-
+ let history = useHistory()
 const handleChange=(e)=>{
   console.log(e.target.value)
   setForm({...form, [e.target.name]: e.target.value})
@@ -21,6 +22,7 @@ const handleSubmit =(e)=>{
   e.preventDefault()
   props.addNewUser(form)
 setForm(intialForm)
+history.push('/home')
 }
     return(  <Form onSubmit={handleSubmit}>
       <Form.Group className="mb-3" controlId="formBasicUsername">

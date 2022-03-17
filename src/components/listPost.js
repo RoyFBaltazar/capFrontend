@@ -13,7 +13,7 @@ const ListOfPost =(props)=>{
         props.fetchTete()
     
       }, [])
-      console.log(props.tetedata)
+      
     return(<div>
        {/* { props.tetedata.length > 0 ? props.tetedata.map(post=>{return(<>
        <Tetepost />
