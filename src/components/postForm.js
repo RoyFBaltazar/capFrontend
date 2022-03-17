@@ -1,7 +1,19 @@
 import Form from 'react-bootstrap/Form'
 import { Row, Col, InputGroup, FormControl, Button } from 'react-bootstrap';
+import { newPost } from '../actions/actions';
+import { useState } from 'react';
 
 const Post=(props)=>{
+const [intialForm] = useState({
+  
+  nickname: '',
+  teteatete: '',
+  private: false
+
+
+})
+  const username = localStorage.getItem('username')
+  
     return(<div>
    <Form>
   <Row className="align-items-center">
@@ -13,6 +25,7 @@ const Post=(props)=>{
         className="mb-2"
         id="inlineFormInput"
         placeholder="Let's Talk"
+        name="teteatete"
       />
     </Col>
     <Col xs="auto">
@@ -21,7 +34,7 @@ const Post=(props)=>{
       </Form.Label>
       <InputGroup className="mb-2">
         <InputGroup.Text>#</InputGroup.Text>
-        <FormControl id="inlineFormInputGroup" placeholder="nickname" />
+        <FormControl id="inlineFormInputGroup" name="nickname" placeholder="nickname" />
       </InputGroup>
     </Col>
     <Col xs="auto">
@@ -29,6 +42,7 @@ const Post=(props)=>{
         type="checkbox"
         id="autoSizingCheck"
         className="mb-2"
+        name='private'
         label="Private"
       />
     </Col>

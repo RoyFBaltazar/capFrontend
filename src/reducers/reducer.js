@@ -1,4 +1,4 @@
-import { FETCH_TETE_FAIL, FETCH_TETE_START, FETCH_TETE_SUCESS, NEW_USER } from "../actions/actions";
+import { FETCH_TETE_FAIL, FETCH_TETE_START, FETCH_TETE_SUCESS, LOGIN_USER, NEW_USER } from "../actions/actions";
 import dummyData from "../dummyData";
 const intialState = {
     tetedata: dummyData,
@@ -27,7 +27,11 @@ export default function reducer (state = intialState, action){
                 console.log(action.payload)
                 return{
                     ...state, tetedata: state.tetedata, error: '', users: action.payload , isloading: false
-                }    
+                }
+            case LOGIN_USER:
+                return{
+                    ...state, tetedata: state.tetedata, error: '', users: action.payload, isloading: false
+                }        
                 default: return state
     }
 }
