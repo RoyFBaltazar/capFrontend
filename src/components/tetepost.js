@@ -18,7 +18,7 @@ const Tetepost = (props)=>{
     justifyContent: 'center',
 }}>
 
-<Card style={{ width: '22rem' }}>
+<Card style={{ width: '50rem' }}>
 <Card.Header>{post.username}</Card.Header>
 <Card.Body>
     <blockquote className="blockquote mb-1">

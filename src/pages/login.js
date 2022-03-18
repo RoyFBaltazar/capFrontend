@@ -32,6 +32,7 @@ const Login =(props)=>{
   console.log(props.error)
   if(props.error){
     console.log(props.error)
+    alert('check username or password')
     history.push('/login')
   }
   else{history.push('/home')

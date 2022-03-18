@@ -28,7 +28,7 @@ function App(props) {
   }, [])
   
   
-
+console.log(props.error)
   return (
     <div className="App">
      

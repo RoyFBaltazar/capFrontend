@@ -18,7 +18,7 @@ const Navbartop=(props)=>{
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
       
-      <Nav.Link as={Link} to="/username/:username" >My Post</Nav.Link>
+      <Nav.Link as={Link} to="/username/:username">My Post</Nav.Link>
       <NavDropdown title="More" id="collasible-nav-dropdown">
         <NavDropdown.Item href="https://github.com/RoyFBaltazar/capFrontend">Github</NavDropdown.Item>
         <NavDropdown.Item href="https://www.linkedin.com/in/roy-baltazar-9b42a5228/">LinkedIn</NavDropdown.Item>
