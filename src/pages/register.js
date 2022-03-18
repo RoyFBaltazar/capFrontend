@@ -22,7 +22,7 @@ const handleSubmit =(e)=>{
   e.preventDefault()
   props.addNewUser(form)
 setForm(intialForm)
-history.push('/home')
+history.push('/login')
 window.location.reload(false)
 }
     return(  <Form onSubmit={handleSubmit}>
