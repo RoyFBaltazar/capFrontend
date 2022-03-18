@@ -10,7 +10,7 @@ const [intialForm] = useState({
   username: localStorage.getItem('username'),
   nickname: '',
   teteatete: '',
-  // private: false
+  private: false
 
 
 })
@@ -51,7 +51,7 @@ const [intialForm] = useState({
       </Form.Label>
       <InputGroup className="mb-2">
         <InputGroup.Text>#</InputGroup.Text>
-        <FormControl id="inlineFormInputGroup" minLength="1" name="nickname" placeholder="nickname" onChange={handleChange} />
+        <FormControl id="inlineFormInputGroup" minLength="3" name="nickname" placeholder="nickname" onChange={handleChange} />
       </InputGroup>
     </Col>
     <Col xs="auto">
@@ -59,8 +59,10 @@ const [intialForm] = useState({
         type="checkbox"
         id="autoSizingCheck"
         className="mb-2"
-        name='private'
+        name="private"
+        value={true}
         label="Private"
+        onChange={handleChange}
       />
     </Col>
     <Col xs="auto">

@@ -38,7 +38,7 @@ export default function reducer (state = intialState, action){
                         ...state, tetedata: state.tetedata, error: '', users: '', isloading: false, loggedIn: false}
                 case Post_TETE:
                     return{
-                        ...state, tetedata: [...state.tetedata, action.payload ], error: '', users: '', isloading: false, loggedIn: true
+                        ...state, tetedata: [action.payload, ...state.tetedata ], error: '', users: '', isloading: false, loggedIn: true
                     }
                 default: return state
     }

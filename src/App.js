@@ -33,7 +33,7 @@ function App(props) {
     <div className="App">
      
       <Navbartop/><br/>
-     
+     {props.error && <h1>{props.error}</h1>}
    <Switch>
    <Route path='/username/:usernames' component={UserHome}/>
    <Route path='/register' component={Register}/>

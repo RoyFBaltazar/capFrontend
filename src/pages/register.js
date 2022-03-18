@@ -42,7 +42,7 @@ history.push('/home')
       
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
-          <Form.Control type="text" minLength="7" name="password" placeholder="Password" onChange={handleChange} />
+          <Form.Control type="text" minLength="2" name="password" placeholder="Password" onChange={handleChange} />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Age</Form.Label>

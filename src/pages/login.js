@@ -26,7 +26,7 @@ const Login =(props)=>{
     <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>username</Form.Label>
-          <Form.Control type="text" name="username" placeholder="Enter username" onChange={handleChange} />
+          <Form.Control type="text" name="username" placeholder="Enter username" minLength="1" onChange={handleChange} />
           <Form.Text className="text-muted">
             check username
           </Form.Text>
@@ -34,7 +34,7 @@ const Login =(props)=>{
       
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
-          <Form.Control type="password" name="password" minLength= "7" placeholder="Password" onChange={handleChange}/>
+          <Form.Control type="password" name="password" minLength= "2" placeholder="Password" onChange={handleChange}/>
         </Form.Group>
         <Form.Group className="mb-1" controlId="formBasicCheckbox">
           <Form.Check type="checkbox" label="Remember me" />
