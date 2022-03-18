@@ -1,5 +1,5 @@
 import { connect } from "react-redux"
-import { Card, Container } from "react-bootstrap"
+import { Card, Container, Row } from "react-bootstrap"
 
 import { fetchTete } from "../actions/actions"
 const mapToStateToProps=(state)=>({
@@ -14,9 +14,10 @@ const Tetepost = (props)=>{
     return(<div>
 {props.tetedata.map(post=>{return(<Container key={post._id} fluid  style={{
     display: 'flex',
-    alignItems: 'center',
+    alignItems: 'stretch',
     justifyContent: 'center',
 }}>
+
 <Card style={{ width: '22rem' }}>
 <Card.Header>{post.username}</Card.Header>
 <Card.Body>
@@ -32,6 +33,7 @@ const Tetepost = (props)=>{
 </blockquote>
     </Card.Body>
 </Card>
+
 </Container>)})}
 
     </div>)

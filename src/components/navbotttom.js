@@ -25,12 +25,12 @@ const handleDelete=(e)=>{
     <Navbar.Brand href="#home">tête-à-tête</Navbar.Brand>
     <Navbar.Toggle />
     <Navbar.Collapse className="justify-content-end">
-     <Navbar.Text>
+    {localUsename ? <Navbar.Text>
         Signed in as: <a href="#login">{localUsename} {''}</a>
-      </Navbar.Text> 
-      <Navbar.Text>
+      </Navbar.Text>: '' }
+    {localUsename ?  <Navbar.Text>
       {''}   Logout <a href="#login" onClick={handleDelete}> here</a>
-      </Navbar.Text>
+      </Navbar.Text> : ''}
     </Navbar.Collapse>
   </Container>
 </Navbar>

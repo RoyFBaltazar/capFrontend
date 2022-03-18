@@ -8,6 +8,7 @@ const mapToStateToProps=(state)=>({
 })
 const Navbartop=(props)=>{
   let localUsename = localStorage.getItem('username')
+  console.log(localUsename)
  
     return(
 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -26,11 +27,11 @@ const Navbartop=(props)=>{
       </NavDropdown>
     </Nav>
     <Nav>
-      <Nav.Link as={Link} to="/login">Login</Nav.Link> 
+      {localUsename ? '': <Nav.Link as={Link} to="/login">Login</Nav.Link> }
       
-       <Nav.Link eventKey={2} as={Link} to='/register'>
+       {localUsename ? '': <Nav.Link eventKey={2} as={Link} to='/register'>
         Register
-      </Nav.Link>
+      </Nav.Link>}
     </Nav>
   </Navbar.Collapse>
   </Container>

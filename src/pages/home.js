@@ -20,10 +20,10 @@ const Home =(props)=>{
         props.fetchTete()
     
       }, [])
- 
+      let localUsename = localStorage.getItem('username')
     return(<div>
         <h1>Tete-a-Tete</h1>
-<Post/>
+        {localUsename ?  <Post/> : <h1>Login To Post</h1>}
 <ListPost tetedata={props.tetedata}/>
 
     </div>)

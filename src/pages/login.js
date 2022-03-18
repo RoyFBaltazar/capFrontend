@@ -20,6 +20,7 @@ const Login =(props)=>{
     props.loginUser(form)
   setForm(intialForm)
   history.push('/home')
+  window.location.reload(false)
   }
     
     return(<div className="container-md">

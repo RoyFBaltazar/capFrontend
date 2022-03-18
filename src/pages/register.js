@@ -23,6 +23,7 @@ const handleSubmit =(e)=>{
   props.addNewUser(form)
 setForm(intialForm)
 history.push('/home')
+window.location.reload(false)
 }
     return(  <Form onSubmit={handleSubmit}>
       <Form.Group className="mb-3" controlId="formBasicUsername">

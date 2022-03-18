@@ -14,8 +14,11 @@ let user = props.tetedata.filter(data=> data.username === localUsename )
 console.log(user)
     const  usernames = useParams()
     return(<div>
+      
+        
         <h1>Hey {localUsename}!</h1>
-        <Post/>
+        {localUsename ? '': <h1>Login To See Your Post</h1>}
+        {localUsename ?  <Post/> : ''}
 
        {user.map(posts=>{return(<div>
           
