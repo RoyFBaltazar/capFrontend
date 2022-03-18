@@ -3,6 +3,16 @@ import { Form, Button } from "react-bootstrap";
 import { connect } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { loginUser } from "../actions/actions";
+
+
+const mapToStateToProps=(state)=>({
+
+  error: state.error,
+  loggedIn: state.loggedIn
+})
+
+
+
 const Login =(props)=>{
   const [intialForm] = useState({
     username: '',
@@ -19,15 +29,21 @@ const Login =(props)=>{
     e.preventDefault()
     props.loginUser(form)
   setForm(intialForm)
-  history.push('/home')
+  console.log(props.error)
+  if(props.error){
+    console.log(props.error)
+    history.push('/login')
+  }
+  else{history.push('/home')
   window.location.reload(false)
+}
   }
     
     return(<div className="container-md">
     <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>username</Form.Label>
-          <Form.Control type="text" name="username" placeholder="Enter username" minLength="1" onChange={handleChange} />
+          <Form.Control type="text" name="username" placeholder="Enter username" required={true} minLength={2} onChange={handleChange} />
           <Form.Text className="text-muted">
             check username
           </Form.Text>
@@ -35,7 +51,7 @@ const Login =(props)=>{
       
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
-          <Form.Control type="password" name="password" minLength= "1" placeholder="Password" onChange={handleChange}/>
+          <Form.Control type="password" name="password" minLength= {2} required={true}  placeholder="Password" onChange={handleChange}/>
         </Form.Group>
         <Form.Group className="mb-1" controlId="formBasicCheckbox">
           <Form.Check type="checkbox" label="Remember me" />
@@ -48,4 +64,4 @@ const Login =(props)=>{
      </div>
       )
 }
-export default connect(null, {loginUser})(Login);
+export default connect(mapToStateToProps, {loginUser})(Login);
