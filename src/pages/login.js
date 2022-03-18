@@ -35,7 +35,7 @@ const Login =(props)=>{
       
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
-          <Form.Control type="password" name="password" minLength= "2" placeholder="Password" onChange={handleChange}/>
+          <Form.Control type="password" name="password" minLength= "1" placeholder="Password" onChange={handleChange}/>
         </Form.Group>
         <Form.Group className="mb-1" controlId="formBasicCheckbox">
           <Form.Check type="checkbox" label="Remember me" />
