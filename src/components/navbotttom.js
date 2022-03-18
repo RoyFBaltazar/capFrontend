@@ -12,8 +12,8 @@ const NavBottom=(props)=>{
     let localUsename = localStorage.getItem('username')
     let history = useHistory()
 const handleDelete=(e)=>{
-    console.log(props.loggedIn)
-    ;localStorage.clear()
+   
+    localStorage.clear()
     logoutUser()
     history.push('/home')
     window.location.reload(false)

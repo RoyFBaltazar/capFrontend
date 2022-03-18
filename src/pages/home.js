@@ -23,7 +23,7 @@ const Home =(props)=>{
       let localUsename = localStorage.getItem('username')
     return(<div>
         <h1>Tête-à-Tête</h1>
-        { localUsename ? <h3>Hey {localUsename}!</h3>: ''}
+        {localUsename ? <h3>Hey {localUsename}!</h3> : ''}
         {localUsename ?  <Post/> : <h1>Login To Post</h1>}
 <ListPost tetedata={props.tetedata}/>
 

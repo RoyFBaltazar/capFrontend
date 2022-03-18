@@ -20,10 +20,11 @@ const handleChange=(e)=>{
 }
 const handleSubmit =(e)=>{
   e.preventDefault()
+  console.log(form)
   props.addNewUser(form)
 setForm(intialForm)
 history.push('/login')
-window.location.reload(false)
+
 }
     return(  <Form onSubmit={handleSubmit}>
       <Form.Group className="mb-3" controlId="formBasicUsername">
