@@ -1,6 +1,10 @@
 ### Netlify Link
 site: https://pensive-torvalds-e27272.netlify.app/home
 
+### Backend
+Github: https://github.com/RoyFBaltazar/capBackend
+Heroku: https://tete-a-tete-backend.herokuapp.com/
+
 ### User Experience
 Users can:
 <li> Register
