@@ -23,7 +23,7 @@ const mapToStateToProps=(state)=>({
 })
 
 function App(props) {
-  const usernames = useParams()
+ 
 
   useEffect(()=>{
     props.fetchTete()
@@ -37,7 +37,7 @@ console.log(props.error)
       <Navbartop/><br/>
      {props.error && <h1>{props.error}</h1>}
    <Switch>
-   <Route path='/username/:usernames' component={UserHome}/>
+   <Route path='/username/:username' component={UserHome}/>
    <Route path='/register' component={Register}/>
     <Route path='/login' component={Login}/>
     { <Route path='/' component={Home}/>}

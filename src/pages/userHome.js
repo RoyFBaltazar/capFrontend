@@ -12,7 +12,7 @@ const UserHome =(props)=>{
 let localUsename = localStorage.getItem('username')
 let user = props.tetedata.filter(data=> data.username === localUsename )
 console.log(user)
-    
+const username = useParams()
 
     return(<div>
       
@@ -22,7 +22,7 @@ console.log(user)
         {localUsename ?  <Post/> : ''}
 
        {user.map(posts=>{return(<div>
-          
+    {posts.username === username}          
            <Container key={posts._id} fluid  style={{
     display: 'flex',
     alignItems: 'center',
