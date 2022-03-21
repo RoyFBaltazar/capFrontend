@@ -12,7 +12,8 @@ const UserHome =(props)=>{
 let localUsename = localStorage.getItem('username')
 let user = props.tetedata.filter(data=> data.username === localUsename )
 console.log(user)
-    const  usernames = useParams()
+    
+
     return(<div>
       
         

@@ -42,6 +42,7 @@ const [intialForm] = useState({
         id="inlineFormInput"
         placeholder="Let's Talk"
         name="teteatete"
+        required={true}
         onChange={handleChange}
       />
     </Col>
@@ -51,7 +52,7 @@ const [intialForm] = useState({
       </Form.Label>
       <InputGroup className="mb-2">
         <InputGroup.Text>#</InputGroup.Text>
-        <FormControl id="inlineFormInputGroup" minLength="3" name="nickname" placeholder="nickname" onChange={handleChange} />
+        <FormControl id="inlineFormInputGroup"  name="nickname" required={true} placeholder="nickname" onChange={handleChange} />
       </InputGroup>
     </Col>
     <Col xs="auto">
