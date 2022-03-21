@@ -13,7 +13,7 @@ import Navbartop from './components/navBar';
 import NavBottom from './components/navbotttom';
 import Login from './pages/login';
 import UserHome from './pages/userHome';
-import { useParams } from 'react-router-dom';
+
 
 const mapToStateToProps=(state)=>({
   tetedata: state.tetedata,
