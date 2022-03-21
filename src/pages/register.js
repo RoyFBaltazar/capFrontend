@@ -8,7 +8,7 @@ const Register =(props)=>{
     username: '',
     password: '',
     email: '',
-    age: 18
+    age: 19
 
   })
   const [form, setForm] = useState(intialForm)
