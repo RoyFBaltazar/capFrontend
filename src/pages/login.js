@@ -36,7 +36,7 @@ const Login =(props)=>{
     history.push('/login')
   }
   else{history.push('/home')
-  window.location.reload(false)
+  // window.location.reload(false)
 }
   }
     
