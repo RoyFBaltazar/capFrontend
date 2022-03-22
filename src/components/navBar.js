@@ -11,7 +11,7 @@ const Navbartop=(props)=>{
   console.log(localUsename)
  
     return(
-<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+<Navbar collapseOnSelect expand="lg" bg="secondary" variant="dark">
   <Container>
   <Navbar.Brand as={Link} to='/home'>Tête-à-Tête</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
