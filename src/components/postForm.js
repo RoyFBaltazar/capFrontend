@@ -28,6 +28,7 @@ const [intialForm] = useState({
     console.log(form)
     props.newPost(form)
     setForm(intialForm)
+    window.location.reload(false)
   }
 
     return(<div>
