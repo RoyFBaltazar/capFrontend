@@ -10,7 +10,7 @@ const mapToStateToProps=(state)=>({
 const UserHome =(props)=>{
     const {username} = useParams()
 let localUsename = localStorage.getItem('username')
-let user = props.tetedata.filter(data=> data.username === localUsename && data.username === username)
+let user = props.tetedata.filter(data=> data.username === localUsename)
 console.log(user)
 
 
